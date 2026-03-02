@@ -124,12 +124,12 @@ const translations = {
       members: {
         sebastien: {
           name: 'Sebastien Pambu',
-          role: 'Co-Founder & Lead Engineer',
+          role: 'Co-Founder & Operations',
           bio: 'Visionary leader with a passion for technology and community development.'
         },
         archy: {
           name: 'Archy Ntabona',
-          role: 'Co-Founder & Operations',
+          role: 'Co-Founder & Lead Engineer',
           bio: 'Strategic thinker ensuring operational excellence and project success.'
         }
       }
@@ -292,12 +292,12 @@ const translations = {
       members: {
         sebastien: {
           name: 'Sebastien Pambu',
-          role: 'Co-Fondateur & Ingénieur Principal',
+          role: 'Co-Fondateur & Opérations',
           bio: 'Leader visionnaire passionné par la technologie et le développement communautaire.'
         },
         archy: {
           name: 'Archy Ntabona',
-          role: 'Co-Fondateur & Opérations',
+          role: 'Co-Fondateur & Ingénieur Principal',
           bio: 'Penseur stratégique assurant l\'excellence opérationnelle et le succès des projets.'
         }
       }

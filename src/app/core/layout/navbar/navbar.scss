@@ -183,9 +183,43 @@
   }
 }
 
-// Light mode logo - show original (black text with colored swoosh)
-[data-theme="light"] .navbar .logo-img {
-  filter: none;
+// Light mode adjustments
+[data-theme="light"] .navbar {
+  &.scrolled {
+    background: rgba(255, 255, 255, 0.9);
+    border-bottom-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo-img {
+    filter: none;
+  }
+  
+  &-links a {
+    color: #475569;
+    
+    &:hover,
+    &.active {
+      color: #0f172a;
+      background: rgba(0, 0, 0, 0.05);
+    }
+  }
+  
+  .theme-toggle,
+  .lang-toggle {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.1);
+    color: #0f172a;
+    
+    &:hover {
+      background: rgba(0, 0, 0, 0.08);
+      border-color: var(--accent-primary);
+      color: var(--accent-primary);
+    }
+  }
+  
+  &-toggle .bar {
+    background: #0f172a;
+  }
 }
 
 @media (max-width: 768px) {
