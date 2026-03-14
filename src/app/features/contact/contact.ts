@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, AfterViewInit, NgZone } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { SectionWrapper } from '../../shared/components/section-wrapper/section-wrapper';
@@ -6,7 +6,7 @@ import { ContactService } from '../../core/services/contact';
 import { TranslationService } from '../../core/services/translation';
 import type { NgForm } from '@angular/forms';
 import type { ContactForm } from '../../core/services/contact';
-import type { OnDestroy, OnInit } from '@angular/core';
+import type { OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-contact',
@@ -15,10 +15,13 @@ import type { OnDestroy, OnInit } from '@angular/core';
   templateUrl: './contact.html',
   styleUrls: ['./contact.scss'],
 })
-export class Contact implements OnInit, OnDestroy {
+export class Contact implements AfterViewInit, OnDestroy {
   private translationService = inject(TranslationService);
+  private ngZone = inject(NgZone);
   t = this.translationService.t;
   readonly turnstileSiteKey = '0x4AAAAAACq6g8oRTn0dWcZh';
+
+  private turnstileWidgetId: string | null = null;
 
   formData: ContactForm = {
     name: '',
@@ -34,19 +37,41 @@ export class Contact implements OnInit, OnDestroy {
 
   constructor(private contactService: ContactService) {}
 
-  ngOnInit() {
-    window.onTurnstileSuccess = (token: string) => {
-      this.formData.turnstileToken = token;
-    };
-
-    window.onTurnstileExpired = () => {
-      this.formData.turnstileToken = '';
-    };
+  ngAfterViewInit() {
+    this.renderTurnstile();
   }
 
   ngOnDestroy() {
-    delete window.onTurnstileSuccess;
-    delete window.onTurnstileExpired;
+    if (this.turnstileWidgetId && window.turnstile) {
+      window.turnstile.remove(this.turnstileWidgetId);
+    }
+  }
+
+  private renderTurnstile() {
+    const container = document.getElementById('turnstile-container');
+    if (!container) return;
+
+    const tryRender = () => {
+      if (window.turnstile) {
+        this.turnstileWidgetId = window.turnstile.render(container, {
+          sitekey: this.turnstileSiteKey,
+          callback: (token: string) => {
+            this.ngZone.run(() => {
+              this.formData.turnstileToken = token;
+            });
+          },
+          'expired-callback': () => {
+            this.ngZone.run(() => {
+              this.formData.turnstileToken = '';
+            });
+          },
+        });
+      } else {
+        setTimeout(tryRender, 100);
+      }
+    };
+
+    tryRender();
   }
 
   onSubmit(form: NgForm) {
@@ -60,15 +85,21 @@ export class Contact implements OnInit, OnDestroy {
           this.submitSuccess = true;
           form.resetForm();
           this.formData.turnstileToken = '';
-          window.turnstile?.reset();
+          this.resetTurnstile();
         },
         error: () => {
           this.isSubmitting = false;
           this.submitError = true;
           this.formData.turnstileToken = '';
-          window.turnstile?.reset();
+          this.resetTurnstile();
         }
       });
+    }
+  }
+
+  private resetTurnstile() {
+    if (this.turnstileWidgetId && window.turnstile) {
+      window.turnstile.reset(this.turnstileWidgetId);
     }
   }
 }
@@ -76,9 +107,16 @@ export class Contact implements OnInit, OnDestroy {
 declare global {
   interface Window {
     turnstile?: {
-      reset: () => void;
+      render: (
+        container: HTMLElement,
+        options: {
+          sitekey: string;
+          callback: (token: string) => void;
+          'expired-callback': () => void;
+        }
+      ) => string;
+      reset: (widgetId?: string) => void;
+      remove: (widgetId: string) => void;
     };
-    onTurnstileSuccess?: (token: string) => void;
-    onTurnstileExpired?: () => void;
   }
 }
