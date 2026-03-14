@@ -129,6 +129,17 @@
 }
 
 .contact-form {
+  .honeypot-field {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .turnstile-widget {
+    margin-bottom: var(--spacing-md);
+  }
+
   .btn--full {
     width: 100%;
     justify-content: center;

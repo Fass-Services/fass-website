@@ -1,9 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { SectionWrapper } from '../../shared/components/section-wrapper/section-wrapper';
-import { ContactService, ContactForm } from '../../core/services/contact';
+import { ContactService } from '../../core/services/contact';
 import { TranslationService } from '../../core/services/translation';
+import type { NgForm } from '@angular/forms';
+import type { ContactForm } from '../../core/services/contact';
+import type { OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-contact',
@@ -12,14 +15,17 @@ import { TranslationService } from '../../core/services/translation';
   templateUrl: './contact.html',
   styleUrls: ['./contact.scss'],
 })
-export class Contact {
+export class Contact implements OnInit, OnDestroy {
   private translationService = inject(TranslationService);
   t = this.translationService.t;
+  readonly turnstileSiteKey = '0x4AAAAAACq6g8oRTn0dWcZh';
 
   formData: ContactForm = {
     name: '',
     email: '',
-    message: ''
+    message: '',
+    website: '',
+    turnstileToken: '',
   };
 
   isSubmitting = false;
@@ -28,22 +34,51 @@ export class Contact {
 
   constructor(private contactService: ContactService) {}
 
+  ngOnInit() {
+    window.onTurnstileSuccess = (token: string) => {
+      this.formData.turnstileToken = token;
+    };
+
+    window.onTurnstileExpired = () => {
+      this.formData.turnstileToken = '';
+    };
+  }
+
+  ngOnDestroy() {
+    delete window.onTurnstileSuccess;
+    delete window.onTurnstileExpired;
+  }
+
   onSubmit(form: NgForm) {
     if (form.valid) {
       this.isSubmitting = true;
       this.submitError = false;
       
       this.contactService.submitContactForm(this.formData).subscribe({
-        next: (success) => {
+        next: () => {
           this.isSubmitting = false;
           this.submitSuccess = true;
           form.resetForm();
+          this.formData.turnstileToken = '';
+          window.turnstile?.reset();
         },
         error: () => {
           this.isSubmitting = false;
           this.submitError = true;
+          this.formData.turnstileToken = '';
+          window.turnstile?.reset();
         }
       });
     }
+  }
+}
+
+declare global {
+  interface Window {
+    turnstile?: {
+      reset: () => void;
+    };
+    onTurnstileSuccess?: (token: string) => void;
+    onTurnstileExpired?: () => void;
   }
 }
