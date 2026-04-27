@@ -39,13 +39,15 @@
         <h3>{{ industry.data.name }}</h3>
         <p>{{ industry.data.desc }}</p>
         <div class="industry-product">
-          <span class="product-label">Our Solution:</span>
-          <span class="product-name">{{ industry.data.product }}</span>
-        </div>
-        <div class="industry-arrow">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
+          <div class="industry-product-info">
+            <span class="product-label">Our Solution:</span>
+            <span class="product-name">{{ industry.data.product }}</span>
+          </div>
+          <div class="industry-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </div>
         </div>
       </a>
     }
