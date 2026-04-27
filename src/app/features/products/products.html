@@ -1,0 +1,40 @@
+<section class="page-hero">
+  <div class="page-hero-bg">
+    <div class="page-hero-orb page-hero-orb--1"></div>
+    <div class="page-hero-orb page-hero-orb--2"></div>
+  </div>
+  <div class="container">
+    <span class="page-badge animate-fade-in">{{ t().products.badge }}</span>
+    <h1 class="animate-fade-in animate-delay-1">{{ t().products.title }} <span class="gradient-text">{{ t().products.titleHighlight }}</span></h1>
+    <p class="page-subtitle animate-fade-in animate-delay-2">{{ t().products.subtitle }}</p>
+  </div>
+</section>
+
+<app-section-wrapper background="default">
+  <div class="products-grid">
+    @for (product of productsList(); track product.slug) {
+      <div class="product-card glass-card">
+        <div class="product-header">
+          <span class="product-badge" [class.active]="product.status === 'active'">
+            {{ product.data.badge }}
+          </span>
+          <span class="product-status" [class.active]="product.status === 'active'">
+            {{ product.status === 'active' ? 'Live' : t().home.comingSoon }}
+          </span>
+        </div>
+        <h3 class="product-name">{{ product.data.name }}</h3>
+        <p class="product-tagline">{{ product.data.tagline }}</p>
+        <p class="product-desc">{{ product.data.heroDesc }}</p>
+        <div class="product-for">
+          <strong>For:</strong> {{ product.data.forWho }}
+        </div>
+        <a [routerLink]="['/products', product.slug]" class="btn btn--primary">
+          {{ product.data.cta }}
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    }
+  </div>
+</app-section-wrapper>

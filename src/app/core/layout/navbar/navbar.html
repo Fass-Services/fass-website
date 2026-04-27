@@ -6,9 +6,9 @@
 
     <div class="navbar-links" [class.active]="isMenuOpen">
       <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">{{ t().nav.home }}</a>
+      <a routerLink="/products" routerLinkActive="active" (click)="closeMenu()">{{ t().nav.products }}</a>
+      <a routerLink="/industries" routerLinkActive="active" (click)="closeMenu()">{{ t().nav.industries }}</a>
       <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">{{ t().nav.about }}</a>
-      <a routerLink="/initiatives" routerLinkActive="active" (click)="closeMenu()">{{ t().nav.initiatives }}</a>
-      <a routerLink="/team" routerLinkActive="active" (click)="closeMenu()">{{ t().nav.team }}</a>
       <a routerLink="/contact" class="nav-cta" (click)="closeMenu()">
         <span>{{ t().nav.contact }}</span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
