@@ -112,16 +112,16 @@
   }
 }
 
-// Light mode adjustments
+// Light mode - dark footer to match navbar
 [data-theme="light"] .footer {
-  background: #f1f5f9;
+  background: #1e293b;
   
   .footer-logo-img {
-    filter: brightness(0.2);
+    filter: invert(1) brightness(1.1);
   }
   
   .footer-glow {
-    background: radial-gradient(ellipse, rgba(67, 56, 202, 0.08) 0%, transparent 70%);
+    background: radial-gradient(ellipse, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
   }
   
   &-brand p,
@@ -129,15 +129,19 @@
   &-col ul li a,
   &-bottom p,
   &-bottom .footer-tagline {
-    color: #475569;
+    color: rgba(255, 255, 255, 0.7);
   }
   
   &-col h4 {
-    color: #0f172a;
+    color: #ffffff;
   }
   
   &-col ul li a:hover {
     color: var(--accent-primary);
+  }
+  
+  &-bottom {
+    border-top-color: rgba(255, 255, 255, 0.1);
   }
 }
 
