@@ -502,6 +502,39 @@ input.error, textarea.error {
   }
 }
 
+/* Light mode footer - dark background to match navbar */
+[data-theme="light"] .footer {
+  background: #1e293b !important;
+  
+  .footer-logo-img {
+    filter: invert(1) brightness(1.1) !important;
+  }
+  
+  .footer-glow {
+    background: radial-gradient(ellipse, rgba(99, 102, 241, 0.15) 0%, transparent 70%) !important;
+  }
+  
+  .footer-brand p,
+  .footer-location,
+  .footer-col ul li a,
+  .footer-bottom p,
+  .footer-bottom .footer-tagline {
+    color: rgba(255, 255, 255, 0.7) !important;
+  }
+  
+  .footer-col h4 {
+    color: #ffffff !important;
+  }
+  
+  .footer-col ul li a:hover {
+    color: var(--accent-primary) !important;
+  }
+  
+  .footer-bottom {
+    border-top-color: rgba(255, 255, 255, 0.1) !important;
+  }
+}
+
 .text-center { text-align: center; }
 .text-muted { color: var(--text-muted); }
 .mt-sm { margin-top: var(--spacing-sm); }
