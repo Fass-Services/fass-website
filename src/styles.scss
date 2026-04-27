@@ -442,6 +442,66 @@ input.error, textarea.error {
   margin: 0 auto;
 }
 
+/* Light mode navbar - darker background so logo pops */
+[data-theme="light"] .navbar {
+  background: #1e293b !important;
+  
+  &.scrolled {
+    background: #1e293b !important;
+    border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+  }
+  
+  .logo-img {
+    filter: invert(1) brightness(1.1) !important;
+  }
+  
+  .navbar-links a {
+    color: rgba(255, 255, 255, 0.8) !important;
+    
+    &:hover,
+    &.active {
+      color: #ffffff !important;
+      background: rgba(255, 255, 255, 0.1) !important;
+    }
+  }
+  
+  .nav-cta {
+    color: white !important;
+  }
+  
+  .theme-toggle,
+  .lang-toggle {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important;
+    
+    &:hover {
+      background: rgba(255, 255, 255, 0.15) !important;
+      color: var(--accent-primary) !important;
+    }
+  }
+  
+  .navbar-toggle .bar {
+    background: #ffffff !important;
+  }
+}
+
+[data-theme="light"] .navbar-links {
+  @media (max-width: 768px) {
+    background: #1e293b !important;
+    
+    a {
+      color: rgba(255, 255, 255, 0.8) !important;
+      
+      &:hover,
+      &.active {
+        color: #ffffff !important;
+        background: rgba(255, 255, 255, 0.1) !important;
+      }
+    }
+  }
+}
+
 .text-center { text-align: center; }
 .text-muted { color: var(--text-muted); }
 .mt-sm { margin-top: var(--spacing-sm); }
