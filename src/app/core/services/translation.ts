@@ -54,6 +54,7 @@ const translations = {
       primetoxdxUrl: 'Coming Soon',
       viewProduct: 'Visit Site',
       requestDemo: 'Request Demo',
+      learnMore: 'Learn More',
       comingSoon: 'Coming Soon',
       live: 'Live',
       // Client Work section
@@ -330,6 +331,7 @@ const translations = {
       primetoxdxUrl: 'Bientôt Disponible',
       viewProduct: 'Visiter le Site',
       requestDemo: 'Demander une Démo',
+      learnMore: 'En Savoir Plus',
       comingSoon: 'Bientôt',
       live: 'En Ligne',
       // Client Work section

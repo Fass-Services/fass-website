@@ -86,6 +86,7 @@
   <div class="products-grid">
     <div class="product-tile glass-card">
       <div class="product-header">
+        <img src="assets/images/logo-suivipro.svg" alt="SuiviPro" class="product-logo">
         <span class="product-status active">{{ t().home.live }}</span>
       </div>
       <h3>{{ t().home.suiviproName }}</h3>
@@ -105,21 +106,38 @@
     </div>
     <div class="product-tile glass-card">
       <div class="product-header">
+        <div class="product-logo-placeholder">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </div>
         <span class="product-status">{{ t().home.comingSoon }}</span>
       </div>
       <h3>{{ t().home.homehavenName }}</h3>
       <p class="product-tagline">{{ t().home.homehavenTagline }}</p>
       <p class="product-desc">{{ t().home.homehavenDesc }}</p>
-      <a routerLink="/products/homehaven" class="btn btn--secondary btn--sm">{{ t().home.viewProduct }}</a>
+      <a routerLink="/products/homehaven" class="btn btn--secondary btn--sm">{{ t().home.learnMore }}</a>
     </div>
     <div class="product-tile glass-card">
       <div class="product-header">
-        <span class="product-status">{{ t().home.comingSoon }}</span>
+        <img src="assets/images/logo-primetoxdx.png" alt="PrimeToxDx" class="product-logo">
+        <span class="product-status active">{{ t().home.live }}</span>
       </div>
       <h3>{{ t().home.primetoxdxName }}</h3>
       <p class="product-tagline">{{ t().home.primetoxdxTagline }}</p>
       <p class="product-desc">{{ t().home.primetoxdxDesc }}</p>
-      <a routerLink="/products/primetoxdx" class="btn btn--secondary btn--sm">{{ t().home.viewProduct }}</a>
+      <div class="product-actions">
+        <a href="https://primetoxdx.com" target="_blank" rel="noopener" class="btn btn--primary btn--sm">
+          {{ t().home.viewProduct }}
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+            <polyline points="15 3 21 3 21 9"/>
+            <line x1="10" y1="14" x2="21" y2="3"/>
+          </svg>
+        </a>
+        <a routerLink="/contact" class="btn btn--secondary btn--sm">{{ t().home.requestDemo }}</a>
+      </div>
     </div>
   </div>
 </app-section-wrapper>
