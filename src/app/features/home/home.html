@@ -91,14 +91,17 @@
       <h3>{{ t().home.suiviproName }}</h3>
       <p class="product-tagline">{{ t().home.suiviproTagline }}</p>
       <p class="product-desc">{{ t().home.suiviproDesc }}</p>
-      <a href="https://suivipro.com" target="_blank" rel="noopener" class="btn btn--primary btn--sm">
-        {{ t().home.viewProduct }}
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-          <polyline points="15 3 21 3 21 9"/>
-          <line x1="10" y1="14" x2="21" y2="3"/>
-        </svg>
-      </a>
+      <div class="product-actions">
+        <a href="https://suivipro.app" target="_blank" rel="noopener" class="btn btn--primary btn--sm">
+          {{ t().home.viewProduct }}
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+            <polyline points="15 3 21 3 21 9"/>
+            <line x1="10" y1="14" x2="21" y2="3"/>
+          </svg>
+        </a>
+        <a routerLink="/contact" class="btn btn--secondary btn--sm">{{ t().home.requestDemo }}</a>
+      </div>
     </div>
     <div class="product-tile glass-card">
       <div class="product-header">

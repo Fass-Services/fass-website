@@ -55,6 +55,12 @@
     margin-bottom: var(--spacing-sm);
   }
 
+  .product-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+  }
+
   .product-status {
     display: inline-block;
     padding: 0.25rem 0.75rem;
