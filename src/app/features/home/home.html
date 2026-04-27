@@ -9,8 +9,7 @@
     <div class="hero-content">
       <span class="hero-badge animate-fade-in">{{ t().home.badge }}</span>
       <h1 class="hero-title animate-fade-in animate-delay-1">
-        {{ t().home.title1 }} <span class="gradient-text">{{ t().home.titleHighlight }}</span><br>
-        {{ t().home.title2 }}
+        {{ t().home.title1 }} <span class="gradient-text">{{ t().home.titleHighlight }}</span>
       </h1>
       <p class="hero-subtitle animate-fade-in animate-delay-2">
         {{ t().home.subtitle }}
@@ -29,8 +28,8 @@
       <div class="hero-card hero-card--1 glass-card">
         <div class="hero-card-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M2 20h20"/>
-            <path d="M5 20V8l7-4 7 4v12"/>
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <path d="M9 3v18M15 3v18M3 9h18M3 15h18"/>
           </svg>
         </div>
         <span>{{ t().home.card1 }}</span>
@@ -38,7 +37,8 @@
       <div class="hero-card hero-card--2 glass-card">
         <div class="hero-card-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+            <line x1="12" y1="18" x2="12.01" y2="18"/>
           </svg>
         </div>
         <span>{{ t().home.card2 }}</span>
@@ -46,7 +46,9 @@
       <div class="hero-card hero-card--3 glass-card">
         <div class="hero-card-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
           </svg>
         </div>
         <span>{{ t().home.card3 }}</span>
@@ -55,63 +57,136 @@
   </div>
 </section>
 
-<app-section-wrapper [badge]="t().home.industryBadge" [title]="t().home.industryTitle" [subtitle]="t().home.industrySubtitle" background="default">
-  <div class="industries-grid">
-    <a routerLink="/products/suivipro" class="industry-tile glass-card">
-      <div class="industry-icon">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M2 20h20"/>
-          <path d="M5 20V8l7-4 7 4v12"/>
-          <path d="M9 20v-4h6v4"/>
-        </svg>
-      </div>
-      <h3>{{ t().home.industryConstruction }}</h3>
-      <p>{{ t().home.industryConstructionDesc }}</p>
-    </a>
-    <a routerLink="/products/primetoxdx" class="industry-tile glass-card">
-      <div class="industry-icon">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-        </svg>
-      </div>
-      <h3>{{ t().home.industryHealthcare }}</h3>
-      <p>{{ t().home.industryHealthcareDesc }}</p>
-    </a>
-    <a routerLink="/products/homehaven" class="industry-tile glass-card">
-      <div class="industry-icon">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-          <polyline points="9 22 9 12 15 12 15 22"/>
-        </svg>
-      </div>
-      <h3>{{ t().home.industryRealEstate }}</h3>
-      <p>{{ t().home.industryRealEstateDesc }}</p>
-    </a>
+<app-section-wrapper [badge]="t().home.processBadge" [title]="t().home.processTitle" [subtitle]="t().home.processSubtitle" background="default">
+  <div class="process-grid">
+    <div class="process-step glass-card">
+      <div class="process-number">1</div>
+      <h3>{{ t().home.processStep1Title }}</h3>
+      <p>{{ t().home.processStep1Desc }}</p>
+    </div>
+    <div class="process-step glass-card">
+      <div class="process-number">2</div>
+      <h3>{{ t().home.processStep2Title }}</h3>
+      <p>{{ t().home.processStep2Desc }}</p>
+    </div>
+    <div class="process-step glass-card">
+      <div class="process-number">3</div>
+      <h3>{{ t().home.processStep3Title }}</h3>
+      <p>{{ t().home.processStep3Desc }}</p>
+    </div>
+    <div class="process-step glass-card">
+      <div class="process-number">4</div>
+      <h3>{{ t().home.processStep4Title }}</h3>
+      <p>{{ t().home.processStep4Desc }}</p>
+    </div>
   </div>
 </app-section-wrapper>
 
 <app-section-wrapper [badge]="t().home.productsBadge" [title]="t().home.productsTitle" [subtitle]="t().home.productsSubtitle" background="gradient">
   <div class="products-grid">
     <div class="product-tile glass-card">
-      <span class="product-status active">Live</span>
+      <div class="product-header">
+        <span class="product-status active">{{ t().home.live }}</span>
+      </div>
       <h3>{{ t().home.suiviproName }}</h3>
       <p class="product-tagline">{{ t().home.suiviproTagline }}</p>
       <p class="product-desc">{{ t().home.suiviproDesc }}</p>
-      <a routerLink="/products/suivipro" class="btn btn--primary btn--sm">{{ t().home.viewProduct }}</a>
+      <a href="https://suivipro.com" target="_blank" rel="noopener" class="btn btn--primary btn--sm">
+        {{ t().home.viewProduct }}
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+          <polyline points="15 3 21 3 21 9"/>
+          <line x1="10" y1="14" x2="21" y2="3"/>
+        </svg>
+      </a>
     </div>
     <div class="product-tile glass-card">
-      <span class="product-status">{{ t().home.comingSoon }}</span>
+      <div class="product-header">
+        <span class="product-status">{{ t().home.comingSoon }}</span>
+      </div>
       <h3>{{ t().home.homehavenName }}</h3>
       <p class="product-tagline">{{ t().home.homehavenTagline }}</p>
       <p class="product-desc">{{ t().home.homehavenDesc }}</p>
       <a routerLink="/products/homehaven" class="btn btn--secondary btn--sm">{{ t().home.viewProduct }}</a>
     </div>
     <div class="product-tile glass-card">
-      <span class="product-status">{{ t().home.comingSoon }}</span>
+      <div class="product-header">
+        <span class="product-status">{{ t().home.comingSoon }}</span>
+      </div>
       <h3>{{ t().home.primetoxdxName }}</h3>
       <p class="product-tagline">{{ t().home.primetoxdxTagline }}</p>
       <p class="product-desc">{{ t().home.primetoxdxDesc }}</p>
       <a routerLink="/products/primetoxdx" class="btn btn--secondary btn--sm">{{ t().home.viewProduct }}</a>
+    </div>
+  </div>
+</app-section-wrapper>
+
+<app-section-wrapper [badge]="t().home.clientsBadge" [title]="t().home.clientsTitle" [subtitle]="t().home.clientsSubtitle" background="default">
+  <div class="clients-grid">
+    <div class="client-card glass-card">
+      <div class="client-type">{{ t().home.clientProject1Type }}</div>
+      <h3>{{ t().home.clientProject1Name }}</h3>
+      <p>{{ t().home.clientProject1Desc }}</p>
+      <span class="client-status">{{ t().home.clientProject1Status }}</span>
+    </div>
+    <div class="client-card client-card--cta glass-card">
+      <div class="client-cta-icon">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="8" x2="12" y2="16"/>
+          <line x1="8" y1="12" x2="16" y2="12"/>
+        </svg>
+      </div>
+      <h3>{{ t().home.clientCustomTitle }}</h3>
+      <p>{{ t().home.clientCustomDesc }}</p>
+      <a routerLink="/contact" class="btn btn--primary btn--sm">{{ t().home.clientCustomCta }}</a>
+    </div>
+  </div>
+</app-section-wrapper>
+
+<app-section-wrapper [badge]="t().home.deliverBadge" [title]="t().home.deliverTitle" [subtitle]="t().home.deliverSubtitle" background="gradient">
+  <div class="deliver-grid">
+    <div class="deliver-item glass-card">
+      <div class="deliver-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="2" y1="12" x2="22" y2="12"/>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+      </div>
+      <h4>{{ t().home.deliverWebsites }}</h4>
+      <p>{{ t().home.deliverWebsitesDesc }}</p>
+    </div>
+    <div class="deliver-item glass-card">
+      <div class="deliver-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="18" height="18" rx="2"/>
+          <path d="M3 9h18"/>
+          <path d="M9 21V9"/>
+        </svg>
+      </div>
+      <h4>{{ t().home.deliverWebApps }}</h4>
+      <p>{{ t().home.deliverWebAppsDesc }}</p>
+    </div>
+    <div class="deliver-item glass-card">
+      <div class="deliver-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+          <line x1="12" y1="18" x2="12.01" y2="18"/>
+        </svg>
+      </div>
+      <h4>{{ t().home.deliverMobileApps }}</h4>
+      <p>{{ t().home.deliverMobileAppsDesc }}</p>
+    </div>
+    <div class="deliver-item glass-card">
+      <div class="deliver-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="16 18 22 12 16 6"/>
+          <polyline points="8 6 2 12 8 18"/>
+        </svg>
+      </div>
+      <h4>{{ t().home.deliverCustom }}</h4>
+      <p>{{ t().home.deliverCustomDesc }}</p>
     </div>
   </div>
 </app-section-wrapper>
@@ -151,34 +226,12 @@
     <div class="why-item glass-card">
       <div class="why-icon">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-          <polyline points="14 2 14 8 20 8"/>
-          <line x1="16" y1="13" x2="8" y2="13"/>
-          <line x1="16" y1="17" x2="8" y2="17"/>
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+          <polyline points="22 4 12 14.01 9 11.01"/>
         </svg>
       </div>
       <h4>{{ t().home.whyAudit }}</h4>
       <p>{{ t().home.whyAuditDesc }}</p>
-    </div>
-  </div>
-</app-section-wrapper>
-
-<app-section-wrapper [badge]="t().home.storyBadge" [title]="t().home.storyTitle" [subtitle]="t().home.storySubtitle" background="gradient">
-  <div class="metrics-grid">
-    <div class="metric-card glass-card">
-      <span class="metric-value gradient-text">{{ t().home.storyMetric1Value }}</span>
-      <span class="metric-label">{{ t().home.storyMetric1 }}</span>
-      <p class="metric-desc">{{ t().home.storyMetric1Desc }}</p>
-    </div>
-    <div class="metric-card glass-card">
-      <span class="metric-value gradient-text">{{ t().home.storyMetric2Value }}</span>
-      <span class="metric-label">{{ t().home.storyMetric2 }}</span>
-      <p class="metric-desc">{{ t().home.storyMetric2Desc }}</p>
-    </div>
-    <div class="metric-card glass-card">
-      <span class="metric-value gradient-text">{{ t().home.storyMetric3Value }}</span>
-      <span class="metric-label">{{ t().home.storyMetric3 }}</span>
-      <p class="metric-desc">{{ t().home.storyMetric3Desc }}</p>
     </div>
   </div>
 </app-section-wrapper>
@@ -199,7 +252,7 @@
             <path d="M5 12h14M12 5l7 7-7 7"/>
           </svg>
         </a>
-        <a routerLink="/contact" class="btn btn--ghost">{{ t().home.ctaBtn2 }}</a>
+        <a routerLink="/products" class="btn btn--ghost">{{ t().home.ctaBtn2 }}</a>
       </div>
     </div>
   </div>
