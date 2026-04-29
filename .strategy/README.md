@@ -27,8 +27,8 @@ This directory contains market research, value propositions, and marketing strat
 |---------|--------|------------|-----------------|
 | **SuiviPro** | Live | — | — |
 | **HomeHaven** | Development | — | — |
-| **Tax Companion** | Development | ✅ | ✅ |
-| **Autografik** | Development | ✅ | ✅ |
+| **Tax Companion** | Development | [View →](./value-propositions/tax-companion-value-prop.md) | ✅ |
+| **Autografik** | Development | [View →](./value-propositions/autografik-value-prop.md) | ✅ |
 
 ### Client Projects
 
@@ -43,6 +43,8 @@ This directory contains market research, value propositions, and marketing strat
 
 ### Tax Companion
 
+📄 **[Full Value Proposition →](./value-propositions/tax-companion-value-prop.md)**
+
 - **What:** Pre-filing tax organizer (not a filing tool)
 - **Target:** 70M+ gig workers, 16M+ Schedule C filers
 - **Pricing:** $49/year Pro tier
@@ -50,6 +52,8 @@ This directory contains market research, value propositions, and marketing strat
 - **Moat:** Zero-knowledge encryption, uncontested niche
 
 ### Autografik
+
+📄 **[Full Value Proposition →](./value-propositions/autografik-value-prop.md)**
 
 - **What:** Professional email signature generator
 - **Target:** 4M+ US college graduates annually
