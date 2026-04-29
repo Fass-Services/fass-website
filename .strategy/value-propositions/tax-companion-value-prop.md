@@ -1,9 +1,18 @@
 # Tax Companion — Value Proposition & Revenue Analysis
 
+← [Back to Strategy Index](../README.md)
+
 **Prepared for:** Partner Presentation  
 **Date:** April 2026  
 **Product:** Tax Companion (pregame-tax)  
 **Entity:** FASS Services
+
+---
+
+## Related Documents
+
+- [Autografik Value Prop](./autografik-value-prop.md)
+- [AppSumo Launch Plan](../marketing-plans/appsumo-launch-plan.md)
 
 ---
 
@@ -247,6 +256,10 @@ Tax Companion occupies an **uncontested market position** (pre-filing organizer)
 **Conservative 5-year outcome:** $500K-$1M ARR  
 **Investment required:** $50K-$75K  
 **ROI potential:** 10-20x over 5 years
+
+---
+
+← [Back to Strategy Index](../README.md) | [Autografik Value Prop →](./autografik-value-prop.md)
 
 ---
 

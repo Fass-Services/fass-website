@@ -1,9 +1,18 @@
 # Autografik — Value Proposition & Revenue Analysis
 
+← [Back to Strategy Index](../README.md)
+
 **Prepared for:** Partner Presentation  
 **Date:** April 2026  
 **Product:** Autografik  
 **Entity:** FASS Services
+
+---
+
+## Related Documents
+
+- [Tax Companion Value Prop](./tax-companion-value-prop.md)
+- [AppSumo Launch Plan](../marketing-plans/appsumo-launch-plan.md)
 
 ---
 
@@ -283,6 +292,10 @@ Autografik is a **capital-efficient, high-margin business** targeting an underse
 **Investment required:** $15K-$25K  
 **ROI potential:** 15-20x over 3 years  
 **Break-even:** Day 1 (first sale)
+
+---
+
+← [Tax Companion Value Prop](./tax-companion-value-prop.md) | [Back to Strategy Index →](../README.md)
 
 ---
 
