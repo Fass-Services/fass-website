@@ -53,8 +53,8 @@ This directory contains market research, value propositions, and marketing strat
 
 - **What:** Pre-filing tax organizer (not a filing tool)
 - **Target:** 70M+ gig workers, 16M+ Schedule C filers
-- **Pricing:** $49/year Pro tier
-- **TAM:** $6.4B US tax software market
+- **Pricing:** \$49/year Pro tier
+- **TAM:** \$6.4B US tax software market
 - **Moat:** Zero-knowledge encryption, uncontested niche
 
 ### Autografik
@@ -63,9 +63,9 @@ This directory contains market research, value propositions, and marketing strat
 
 - **What:** Professional email signature generator
 - **Target:** 4M+ US college graduates annually
-- **Pricing:** $29 lifetime (no subscription)
-- **TAM:** $12.91B digital signature market (2026)
-- **Moat:** $0 infrastructure, viral referral mechanics
+- **Pricing:** \$29 lifetime (no subscription)
+- **TAM:** \$12.91B digital signature market (2026)
+- **Moat:** \$0 infrastructure, viral referral mechanics
 
 ---
 

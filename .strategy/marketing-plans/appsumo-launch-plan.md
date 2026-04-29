@@ -43,10 +43,10 @@
 
 | Product | Direct Price | AppSumo LTD Price | You Keep (50%) |
 |---------|--------------|-------------------|----------------|
-| Tax Companion | $49/year | $59 lifetime | ~$29.50 |
-| Autografik | $29 lifetime | $39 lifetime | ~$19.50 |
+| Tax Companion | \$49/year | \$59 lifetime | ~\$29.50 |
+| Autografik | \$29 lifetime | \$39 lifetime | ~\$19.50 |
 
-**Why price higher on AppSumo?** LTD buyers expect "deals" — a $59 LTD vs $49/year feels like a win. You also offset the platform cut.
+**Why price higher on AppSumo?** LTD buyers expect "deals" — a \$59 LTD vs \$49/year feels like a win. You also offset the platform cut.
 
 ---
 
@@ -154,11 +154,11 @@ Apply learnings to direct sales funnel.
 
 | Item | Cost | Notes |
 |------|------|-------|
-| Demo video (DIY) | $0 | Loom or ScreenFlow |
-| Demo video (pro) | $200-500 | Fiverr editor |
-| Screenshots | $0 | In-app captures |
-| Temporary support | $200-500 | If volume exceeds capacity |
-| **Total** | $0-1,000 | Minimal investment |
+| Demo video (DIY) | \$0 | Loom or ScreenFlow |
+| Demo video (pro) | \$200-500 | Fiverr editor |
+| Screenshots | \$0 | In-app captures |
+| Temporary support | \$200-500 | If volume exceeds capacity |
+| **Total** | \$0-1,000 | Minimal investment |
 
 ---
 
