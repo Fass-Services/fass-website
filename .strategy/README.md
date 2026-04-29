@@ -35,6 +35,7 @@ This directory contains market research, value propositions, and marketing strat
 | Document | Purpose |
 |----------|---------|
 | [AppSumo Launch Plan](./marketing-plans/appsumo-launch-plan.md) | Phased approach to launch both apps on AppSumo |
+| [Atlanta Events 2026](./marketing-plans/atlanta-events-2026.md) | Local events calendar for low-cost demos |
 
 ### Client Projects
 
