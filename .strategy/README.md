@@ -30,6 +30,12 @@ This directory contains market research, value propositions, and marketing strat
 | **Tax Companion** | Development | [View →](./value-propositions/tax-companion-value-prop.md) | ✅ |
 | **Autografik** | Development | [View →](./value-propositions/autografik-value-prop.md) | ✅ |
 
+### Marketing Plans
+
+| Document | Purpose |
+|----------|---------|
+| [AppSumo Launch Plan](./marketing-plans/appsumo-launch-plan.md) | Phased approach to launch both apps on AppSumo |
+
 ### Client Projects
 
 | Project | Status |
