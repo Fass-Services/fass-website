@@ -48,10 +48,6 @@ const translations = {
       homehavenTagline: 'Long-Term Rental Marketplace',
       homehavenDesc: 'Connecting landlords with quality tenants. Payments, messaging, and property management.',
       homehavenUrl: 'Coming Soon',
-      primetoxdxName: 'PrimeToxDx',
-      primetoxdxTagline: 'Medical Diagnostics Platform',
-      primetoxdxDesc: 'Diagnostic workflows and patient records for clinics in resource-constrained environments.',
-      primetoxdxUrl: 'Coming Soon',
       viewProduct: 'Visit Site',
       requestDemo: 'Request Demo',
       learnMore: 'Learn More',
@@ -61,6 +57,9 @@ const translations = {
       clientsBadge: 'Client Projects',
       clientsTitle: 'Software We Build for Others',
       clientsSubtitle: 'Websites, apps, and custom solutions—your problem, our engineering',
+      clientPrimetoxdxName: 'PrimeToxDx',
+      clientPrimetoxdxType: 'Web Application',
+      clientPrimetoxdxDesc: 'Medical diagnostics platform with patient records and workflow automation for healthcare providers.',
       clientProject1Name: 'Buisson Consulting',
       clientProject1Type: 'Website',
       clientProject1Desc: 'Professional consulting firm website with modern design and lead generation.',
@@ -116,7 +115,7 @@ const translations = {
       mvBadge: 'What We Do',
       mvTitle: 'Products + Client Work',
       missionTitle: 'Our Products',
-      missionText: 'We build and maintain our own software products—SuiviPro, HomeHaven, PrimeToxDx. These aren\'t side projects. They\'re live, serving real operators, and constantly improving.',
+      missionText: 'We build and maintain our own software products—SuiviPro and HomeHaven. These aren\'t side projects. They\'re live, serving real operators, and constantly improving.',
       visionTitle: 'Client Projects',
       visionText: 'We also build for clients. Websites, apps, custom software. You bring the problem, we bring the engineering. From consultation to delivery, we handle it.',
       focusBadge: 'Our Edge',
@@ -175,25 +174,6 @@ const translations = {
         ],
         cta: 'Coming Soon'
       },
-      primetoxdx: {
-        badge: 'Healthcare',
-        name: 'PrimeToxDx',
-        tagline: 'Medical Diagnostics Platform',
-        heroDesc: 'Streamline diagnostic workflows and patient records for clinics operating in resource-constrained environments.',
-        forWho: 'For clinics, laboratories, and healthcare providers in underserved regions.',
-        problem: 'Paper-based records, lost test results, and no workflow standardization.',
-        outcome: 'Faster turnaround, complete patient histories, and quality diagnostics.',
-        url: '',
-        features: [
-          'Digital patient records',
-          'Diagnostic workflow automation',
-          'Result tracking and alerts',
-          'Offline capability',
-          'Compliance documentation',
-          'Multi-facility support'
-        ],
-        cta: 'Coming Soon'
-      }
     },
     industries: {
       badge: 'Industries',
@@ -209,8 +189,8 @@ const translations = {
       healthcare: {
         name: 'Healthcare',
         desc: 'Diagnostic workflows and patient management for clinics.',
-        product: 'PrimeToxDx',
-        link: '/products/primetoxdx'
+        product: 'PrimeToxDx (Client)',
+        link: '/contact'
       },
       realEstate: {
         name: 'Real Estate',
@@ -325,10 +305,6 @@ const translations = {
       homehavenTagline: 'Plateforme de Location Longue Durée',
       homehavenDesc: 'Connecter propriétaires et locataires de qualité. Paiements, messagerie et gestion immobilière.',
       homehavenUrl: 'Bientôt Disponible',
-      primetoxdxName: 'PrimeToxDx',
-      primetoxdxTagline: 'Plateforme de Diagnostic Médical',
-      primetoxdxDesc: 'Workflows de diagnostic et dossiers patients pour cliniques en environnements à ressources limitées.',
-      primetoxdxUrl: 'Bientôt Disponible',
       viewProduct: 'Visiter le Site',
       requestDemo: 'Demander une Démo',
       learnMore: 'En Savoir Plus',
@@ -338,6 +314,9 @@ const translations = {
       clientsBadge: 'Projets Clients',
       clientsTitle: 'Logiciels Que Nous Créons pour les Autres',
       clientsSubtitle: 'Sites web, applications et solutions sur mesure—votre problème, notre ingénierie',
+      clientPrimetoxdxName: 'PrimeToxDx',
+      clientPrimetoxdxType: 'Application Web',
+      clientPrimetoxdxDesc: 'Plateforme de diagnostic médical avec dossiers patients et automatisation des workflows pour les prestataires de santé.',
       clientProject1Name: 'Buisson Consulting',
       clientProject1Type: 'Site Web',
       clientProject1Desc: 'Site web de cabinet de conseil professionnel avec design moderne et génération de leads.',
@@ -393,7 +372,7 @@ const translations = {
       mvBadge: 'Ce Que Nous Faisons',
       mvTitle: 'Produits + Travail Client',
       missionTitle: 'Nos Produits',
-      missionText: 'Nous créons et maintenons nos propres produits logiciels—SuiviPro, HomeHaven, PrimeToxDx. Ce ne sont pas des projets secondaires. Ils sont en production, servent de vrais opérateurs, et s\'améliorent constamment.',
+      missionText: 'Nous créons et maintenons nos propres produits logiciels—SuiviPro et HomeHaven. Ce ne sont pas des projets secondaires. Ils sont en production, servent de vrais opérateurs, et s\'améliorent constamment.',
       visionTitle: 'Projets Clients',
       visionText: 'Nous créons aussi pour les clients. Sites web, applications, logiciels sur mesure. Vous apportez le problème, nous apportons l\'ingénierie. De la consultation à la livraison, nous gérons.',
       focusBadge: 'Notre Avantage',
@@ -452,25 +431,6 @@ const translations = {
         ],
         cta: 'Bientôt Disponible'
       },
-      primetoxdx: {
-        badge: 'Santé',
-        name: 'PrimeToxDx',
-        tagline: 'Plateforme de Diagnostic Médical',
-        heroDesc: 'Optimisez les workflows de diagnostic et les dossiers patients pour les cliniques en environnements à ressources limitées.',
-        forWho: 'Pour les cliniques, laboratoires et prestataires de santé dans les régions mal desservies.',
-        problem: 'Dossiers papier, résultats de tests perdus et aucune standardisation des workflows.',
-        outcome: 'Délais plus rapides, historiques patients complets et diagnostics de qualité.',
-        url: '',
-        features: [
-          'Dossiers patients numériques',
-          'Automatisation des workflows diagnostic',
-          'Suivi des résultats et alertes',
-          'Capacité hors-ligne',
-          'Documentation de conformité',
-          'Support multi-établissements'
-        ],
-        cta: 'Bientôt Disponible'
-      }
     },
     industries: {
       badge: 'Industries',
@@ -486,8 +446,8 @@ const translations = {
       healthcare: {
         name: 'Santé',
         desc: 'Workflows de diagnostic et gestion des patients pour les cliniques.',
-        product: 'PrimeToxDx',
-        link: '/products/primetoxdx'
+        product: 'PrimeToxDx (Client)',
+        link: '/contact'
       },
       realEstate: {
         name: 'Immobilier',

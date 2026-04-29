@@ -119,15 +119,21 @@
       <p class="product-desc">{{ t().home.homehavenDesc }}</p>
       <a routerLink="/products/homehaven" class="btn btn--secondary btn--sm">{{ t().home.learnMore }}</a>
     </div>
-    <div class="product-tile glass-card">
-      <div class="product-header">
-        <img src="assets/images/logo-primetoxdx.png" alt="PrimeToxDx" class="product-logo">
-        <span class="product-status active">{{ t().home.live }}</span>
+
+  </div>
+</app-section-wrapper>
+
+<app-section-wrapper [badge]="t().home.clientsBadge" [title]="t().home.clientsTitle" [subtitle]="t().home.clientsSubtitle" background="default">
+  <div class="clients-grid">
+    <div class="client-card glass-card">
+      <div class="client-header">
+        <img src="assets/images/logo-primetoxdx.png" alt="PrimeToxDx" class="client-logo">
+        <span class="client-status active">{{ t().home.live }}</span>
       </div>
-      <h3>{{ t().home.primetoxdxName }}</h3>
-      <p class="product-tagline">{{ t().home.primetoxdxTagline }}</p>
-      <p class="product-desc">{{ t().home.primetoxdxDesc }}</p>
-      <div class="product-actions">
+      <div class="client-type">{{ t().home.clientPrimetoxdxType }}</div>
+      <h3>{{ t().home.clientPrimetoxdxName }}</h3>
+      <p>{{ t().home.clientPrimetoxdxDesc }}</p>
+      <div class="client-actions">
         <a href="https://primetoxdx.com" target="_blank" rel="noopener" class="btn btn--primary btn--sm">
           {{ t().home.viewProduct }}
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -136,14 +142,8 @@
             <line x1="10" y1="14" x2="21" y2="3"/>
           </svg>
         </a>
-        <a routerLink="/contact" class="btn btn--secondary btn--sm">{{ t().home.requestDemo }}</a>
       </div>
     </div>
-  </div>
-</app-section-wrapper>
-
-<app-section-wrapper [badge]="t().home.clientsBadge" [title]="t().home.clientsTitle" [subtitle]="t().home.clientsSubtitle" background="default">
-  <div class="clients-grid">
     <div class="client-card glass-card">
       <div class="client-type">{{ t().home.clientProject1Type }}</div>
       <h3>{{ t().home.clientProject1Name }}</h3>

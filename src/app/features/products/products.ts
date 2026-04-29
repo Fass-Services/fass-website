@@ -4,7 +4,7 @@ import { RouterLink } from '@angular/router';
 import { SectionWrapper } from '../../shared/components/section-wrapper/section-wrapper';
 import { TranslationService } from '../../core/services/translation';
 
-type ProductSlug = 'suivipro' | 'homehaven' | 'primetoxdx';
+type ProductSlug = 'suivipro' | 'homehaven';
 
 interface ProductInfo {
   badge: string;
@@ -16,6 +16,7 @@ interface ProductInfo {
   outcome: string;
   features: string[];
   cta: string;
+  url: string;
 }
 
 @Component({
@@ -34,7 +35,6 @@ export class Products {
     return [
       { slug: 'suivipro' as const, status: 'active' as const, data: products.suivipro },
       { slug: 'homehaven' as const, status: 'coming' as const, data: products.homehaven },
-      { slug: 'primetoxdx' as const, status: 'coming' as const, data: products.primetoxdx },
     ];
   });
 }
