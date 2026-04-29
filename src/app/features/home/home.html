@@ -8,106 +8,253 @@
   <div class="container hero-container">
     <div class="hero-content">
       <span class="hero-badge animate-fade-in">{{ t().home.badge }}</span>
-       <h1 class="hero-title animate-fade-in animate-delay-1">
-         {{ t().home.title1 }} <span class="gradient-text">{{ t().home.titleHighlight }}</span><br>
-         {{ t().home.title2 }}
-       </h1>
-       <p class="hero-subtitle animate-fade-in animate-delay-2">
-         {{ t().home.subtitle }}
-       </p>
-       <div class="hero-actions animate-fade-in animate-delay-3">
-         <a routerLink="/initiatives" class="btn btn--primary">
-           {{ t().home.cta1 }}
+      <h1 class="hero-title animate-fade-in animate-delay-1">
+        {{ t().home.title1 }} <span class="gradient-text">{{ t().home.titleHighlight }}</span>
+      </h1>
+      <p class="hero-subtitle animate-fade-in animate-delay-2">
+        {{ t().home.subtitle }}
+      </p>
+      <div class="hero-actions animate-fade-in animate-delay-3">
+        <a routerLink="/products" class="btn btn--primary">
+          {{ t().home.cta1 }}
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M5 12h14M12 5l7 7-7 7"/>
           </svg>
-         </a>
-         <a routerLink="/about" class="btn btn--secondary">{{ t().home.cta2 }}</a>
+        </a>
+        <a routerLink="/contact" class="btn btn--secondary">{{ t().home.cta2 }}</a>
       </div>
     </div>
     <div class="hero-visual animate-fade-in animate-delay-4">
       <div class="hero-card hero-card--1 glass-card">
         <div class="hero-card-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <path d="M9 3v18M15 3v18M3 9h18M3 15h18"/>
           </svg>
         </div>
-         <span>{{ t().home.card1 }}</span>
-       </div>
-       <div class="hero-card hero-card--2 glass-card">
-         <div class="hero-card-icon">
-           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-             <circle cx="12" cy="12" r="10"/>
-             <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-           </svg>
-         </div>
-         <span>{{ t().home.card2 }}</span>
-       </div>
-       <div class="hero-card hero-card--3 glass-card">
-         <div class="hero-card-icon">
-           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-             <circle cx="9" cy="7" r="4"/>
-             <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
-           </svg>
-         </div>
-         <span>{{ t().home.card3 }}</span>
+        <span>{{ t().home.card1 }}</span>
+      </div>
+      <div class="hero-card hero-card--2 glass-card">
+        <div class="hero-card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+            <line x1="12" y1="18" x2="12.01" y2="18"/>
+          </svg>
+        </div>
+        <span>{{ t().home.card2 }}</span>
+      </div>
+      <div class="hero-card hero-card--3 glass-card">
+        <div class="hero-card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+        </div>
+        <span>{{ t().home.card3 }}</span>
       </div>
     </div>
   </div>
 </section>
 
-<app-section-wrapper [badge]="t().home.aboutBadge" [title]="t().home.aboutTitle" [subtitle]="t().home.aboutSubtitle" background="gradient">
-   <div class="about-grid">
-     <div class="about-content">
-       <p class="about-lead">{{ t().home.aboutLead }} <strong>{{ t().home.aboutCountry }}</strong>.</p>
-       <p>{{ t().home.aboutText }}</p>
-       <div class="about-stats">
-         <div class="stat">
-           <span class="stat-value gradient-text">2</span>
-           <span class="stat-label">{{ t().home.statsCountries }}</span>
-         </div>
-         <div class="stat">
-           <span class="stat-value gradient-text">5+</span>
-           <span class="stat-label">{{ t().home.statsProjects }}</span>
-         </div>
-         <div class="stat">
-           <span class="stat-value gradient-text">100%</span>
-           <span class="stat-label">{{ t().home.statsCommitted }}</span>
-         </div>
-       </div>
-       <a routerLink="/about" class="btn btn--secondary mt-md">{{ t().home.fullStory }}</a>
+<app-section-wrapper [badge]="t().home.processBadge" [title]="t().home.processTitle" [subtitle]="t().home.processSubtitle" background="default">
+  <div class="process-grid">
+    <div class="process-step glass-card">
+      <div class="process-number">1</div>
+      <h3>{{ t().home.processStep1Title }}</h3>
+      <p>{{ t().home.processStep1Desc }}</p>
     </div>
-     <div class="about-visual">
-       <div class="about-card glass-card">
-         <h4>{{ t().home.missionTitle }}</h4>
-         <p>{{ t().home.missionText }}</p>
-       </div>
-     </div>
+    <div class="process-step glass-card">
+      <div class="process-number">2</div>
+      <h3>{{ t().home.processStep2Title }}</h3>
+      <p>{{ t().home.processStep2Desc }}</p>
+    </div>
+    <div class="process-step glass-card">
+      <div class="process-number">3</div>
+      <h3>{{ t().home.processStep3Title }}</h3>
+      <p>{{ t().home.processStep3Desc }}</p>
+    </div>
+    <div class="process-step glass-card">
+      <div class="process-number">4</div>
+      <h3>{{ t().home.processStep4Title }}</h3>
+      <p>{{ t().home.processStep4Desc }}</p>
+    </div>
   </div>
 </app-section-wrapper>
 
-<app-section-wrapper [badge]="t().home.initBadge" [title]="t().home.initTitle" [subtitle]="t().home.initSubtitle" background="default">
-   <div class="initiatives-grid">
-     <app-card 
-       [title]="t().home.fassTech" 
-       [description]="t().home.fassTechDesc"
-       link="/initiatives"
-       [linkText]="t().home.learnMore">
-     </app-card>
-     <app-card 
-       [title]="t().home.fassAcademy" 
-       [description]="t().home.fassAcademyDesc"
-       link="/initiatives"
-       [linkText]="t().home.comingSoon">
-     </app-card>
-     <app-card 
-       [title]="t().home.fassHealth" 
-       [description]="t().home.fassHealthDesc"
-       link="/initiatives"
-       [linkText]="t().home.comingSoon">
-     </app-card>
-   </div>
+<app-section-wrapper [badge]="t().home.productsBadge" [title]="t().home.productsTitle" [subtitle]="t().home.productsSubtitle" background="gradient">
+  <div class="products-grid">
+    <div class="product-tile glass-card">
+      <div class="product-header">
+        <img src="assets/images/logo-suivipro.svg" alt="SuiviPro" class="product-logo">
+        <span class="product-status active">{{ t().home.live }}</span>
+      </div>
+      <h3>{{ t().home.suiviproName }}</h3>
+      <p class="product-tagline">{{ t().home.suiviproTagline }}</p>
+      <p class="product-desc">{{ t().home.suiviproDesc }}</p>
+      <div class="product-actions">
+        <a href="https://suivipro.app" target="_blank" rel="noopener" class="btn btn--primary btn--sm">
+          {{ t().home.viewProduct }}
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+            <polyline points="15 3 21 3 21 9"/>
+            <line x1="10" y1="14" x2="21" y2="3"/>
+          </svg>
+        </a>
+        <a routerLink="/contact" class="btn btn--secondary btn--sm">{{ t().home.requestDemo }}</a>
+      </div>
+    </div>
+    <div class="product-tile glass-card">
+      <div class="product-header">
+        <div class="product-logo-placeholder">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </div>
+        <span class="product-status">{{ t().home.comingSoon }}</span>
+      </div>
+      <h3>{{ t().home.homehavenName }}</h3>
+      <p class="product-tagline">{{ t().home.homehavenTagline }}</p>
+      <p class="product-desc">{{ t().home.homehavenDesc }}</p>
+      <a routerLink="/products/homehaven" class="btn btn--secondary btn--sm">{{ t().home.learnMore }}</a>
+    </div>
+
+  </div>
+</app-section-wrapper>
+
+<app-section-wrapper [badge]="t().home.clientsBadge" [title]="t().home.clientsTitle" [subtitle]="t().home.clientsSubtitle" background="default">
+  <div class="clients-grid">
+    <div class="client-card glass-card">
+      <div class="client-header">
+        <img src="assets/images/logo-primetoxdx.png" alt="PrimeToxDx" class="client-logo">
+        <span class="client-status active">{{ t().home.live }}</span>
+      </div>
+      <div class="client-type">{{ t().home.clientPrimetoxdxType }}</div>
+      <h3>{{ t().home.clientPrimetoxdxName }}</h3>
+      <p>{{ t().home.clientPrimetoxdxDesc }}</p>
+      <div class="client-actions">
+        <a href="https://primetoxdx.com" target="_blank" rel="noopener" class="btn btn--primary btn--sm">
+          {{ t().home.viewProduct }}
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+            <polyline points="15 3 21 3 21 9"/>
+            <line x1="10" y1="14" x2="21" y2="3"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="client-card glass-card">
+      <div class="client-type">{{ t().home.clientProject1Type }}</div>
+      <h3>{{ t().home.clientProject1Name }}</h3>
+      <p>{{ t().home.clientProject1Desc }}</p>
+      <span class="client-status">{{ t().home.clientProject1Status }}</span>
+    </div>
+    <div class="client-card client-card--cta glass-card">
+      <div class="client-cta-icon">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="8" x2="12" y2="16"/>
+          <line x1="8" y1="12" x2="16" y2="12"/>
+        </svg>
+      </div>
+      <h3>{{ t().home.clientCustomTitle }}</h3>
+      <p>{{ t().home.clientCustomDesc }}</p>
+      <a routerLink="/contact" class="btn btn--primary btn--sm">{{ t().home.clientCustomCta }}</a>
+    </div>
+  </div>
+</app-section-wrapper>
+
+<app-section-wrapper [badge]="t().home.deliverBadge" [title]="t().home.deliverTitle" [subtitle]="t().home.deliverSubtitle" background="gradient">
+  <div class="deliver-grid">
+    <div class="deliver-item glass-card">
+      <div class="deliver-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="2" y1="12" x2="22" y2="12"/>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+      </div>
+      <h4>{{ t().home.deliverWebsites }}</h4>
+      <p>{{ t().home.deliverWebsitesDesc }}</p>
+    </div>
+    <div class="deliver-item glass-card">
+      <div class="deliver-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="18" height="18" rx="2"/>
+          <path d="M3 9h18"/>
+          <path d="M9 21V9"/>
+        </svg>
+      </div>
+      <h4>{{ t().home.deliverWebApps }}</h4>
+      <p>{{ t().home.deliverWebAppsDesc }}</p>
+    </div>
+    <div class="deliver-item glass-card">
+      <div class="deliver-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+          <line x1="12" y1="18" x2="12.01" y2="18"/>
+        </svg>
+      </div>
+      <h4>{{ t().home.deliverMobileApps }}</h4>
+      <p>{{ t().home.deliverMobileAppsDesc }}</p>
+    </div>
+    <div class="deliver-item glass-card">
+      <div class="deliver-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="16 18 22 12 16 6"/>
+          <polyline points="8 6 2 12 8 18"/>
+        </svg>
+      </div>
+      <h4>{{ t().home.deliverCustom }}</h4>
+      <p>{{ t().home.deliverCustomDesc }}</p>
+    </div>
+  </div>
+</app-section-wrapper>
+
+<app-section-wrapper [badge]="t().home.whyBadge" [title]="t().home.whyTitle" [subtitle]="t().home.whySubtitle" background="default">
+  <div class="why-grid">
+    <div class="why-item glass-card">
+      <div class="why-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18.36 6.64a9 9 0 1 1-12.73 0"/>
+          <line x1="12" y1="2" x2="12" y2="12"/>
+        </svg>
+      </div>
+      <h4>{{ t().home.whyOffline }}</h4>
+      <p>{{ t().home.whyOfflineDesc }}</p>
+    </div>
+    <div class="why-item glass-card">
+      <div class="why-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+          <line x1="12" y1="18" x2="12.01" y2="18"/>
+        </svg>
+      </div>
+      <h4>{{ t().home.whyMobile }}</h4>
+      <p>{{ t().home.whyMobileDesc }}</p>
+    </div>
+    <div class="why-item glass-card">
+      <div class="why-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+      </div>
+      <h4>{{ t().home.whyLocal }}</h4>
+      <p>{{ t().home.whyLocalDesc }}</p>
+    </div>
+    <div class="why-item glass-card">
+      <div class="why-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+          <polyline points="22 4 12 14.01 9 11.01"/>
+        </svg>
+      </div>
+      <h4>{{ t().home.whyAudit }}</h4>
+      <p>{{ t().home.whyAuditDesc }}</p>
+    </div>
+  </div>
 </app-section-wrapper>
 
 <section class="cta-section">
@@ -115,19 +262,19 @@
     <div class="cta-orb cta-orb--1"></div>
     <div class="cta-orb cta-orb--2"></div>
   </div>
-   <div class="container">
-     <div class="cta-content glass-card">
-       <h2>{{ t().home.ctaTitle1 }} <span class="gradient-text">{{ t().home.ctaTitleHighlight }}</span>?</h2>
-       <p>{{ t().home.ctaText }}</p>
-       <div class="cta-actions">
-         <a routerLink="/contact" class="btn btn--primary">
-           {{ t().home.ctaBtn1 }}
-           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-             <path d="M5 12h14M12 5l7 7-7 7"/>
-           </svg>
-         </a>
-         <a routerLink="/team" class="btn btn--ghost">{{ t().home.ctaBtn2 }}</a>
-       </div>
-     </div>
-   </div>
+  <div class="container">
+    <div class="cta-content glass-card">
+      <h2>{{ t().home.ctaTitle1 }} <span class="gradient-text">{{ t().home.ctaTitleHighlight }}</span>?</h2>
+      <p>{{ t().home.ctaText }}</p>
+      <div class="cta-actions">
+        <a routerLink="/contact" class="btn btn--primary">
+          {{ t().home.ctaBtn1 }}
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a routerLink="/products" class="btn btn--ghost">{{ t().home.ctaBtn2 }}</a>
+      </div>
+    </div>
+  </div>
 </section>

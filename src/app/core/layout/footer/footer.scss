@@ -112,34 +112,8 @@
   }
 }
 
-// Light mode adjustments
-[data-theme="light"] .footer {
-  background: #f1f5f9;
-  
-  .footer-logo-img {
-    filter: none;
-  }
-  
-  .footer-glow {
-    background: radial-gradient(ellipse, rgba(67, 56, 202, 0.08) 0%, transparent 70%);
-  }
-  
-  &-brand p,
-  &-location,
-  &-col ul li a,
-  &-bottom p,
-  &-bottom .footer-tagline {
-    color: #475569;
-  }
-  
-  &-col h4 {
-    color: #0f172a;
-  }
-  
-  &-col ul li a:hover {
-    color: var(--accent-primary);
-  }
-}
+// Light mode adjustments are in global styles.scss
+// (component-scoped styles can't access [data-theme] attribute on html element)
 
 @media (max-width: 768px) {
   .footer {

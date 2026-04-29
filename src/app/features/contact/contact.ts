@@ -51,7 +51,7 @@ export class Contact implements AfterViewInit, OnDestroy {
     const container = document.getElementById('turnstile-container');
     if (!container) return;
 
-    const tryRender = () => {
+    this.loadTurnstileScript().then(() => {
       if (window.turnstile) {
         this.turnstileWidgetId = window.turnstile.render(container, {
           sitekey: this.turnstileSiteKey,
@@ -66,12 +66,20 @@ export class Contact implements AfterViewInit, OnDestroy {
             });
           },
         });
-      } else {
-        setTimeout(tryRender, 100);
       }
-    };
+    });
+  }
 
-    tryRender();
+  private loadTurnstileScript(): Promise<void> {
+    if (window.turnstile) return Promise.resolve();
+
+    return new Promise((resolve) => {
+      const script = document.createElement('script');
+      script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
+      script.async = true;
+      script.onload = () => resolve();
+      document.head.appendChild(script);
+    });
   }
 
   onSubmit(form: NgForm) {

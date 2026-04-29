@@ -1,0 +1,72 @@
+<section class="page-hero product-hero">
+  <div class="page-hero-bg">
+    <div class="page-hero-orb page-hero-orb--1"></div>
+    <div class="page-hero-orb page-hero-orb--2"></div>
+  </div>
+  <div class="container">
+    <span class="page-badge animate-fade-in">{{ product().badge }}</span>
+    <h1 class="animate-fade-in animate-delay-1">{{ product().name }}</h1>
+    <p class="product-tagline animate-fade-in animate-delay-2">{{ product().tagline }}</p>
+    <p class="page-subtitle animate-fade-in animate-delay-3">{{ product().heroDesc }}</p>
+    <div class="hero-actions animate-fade-in animate-delay-4">
+      <a routerLink="/contact" class="btn btn--primary">
+        {{ product().cta }}
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+      <a routerLink="/products" class="btn btn--secondary">All Products</a>
+    </div>
+  </div>
+</section>
+
+<app-section-wrapper background="default">
+  <div class="product-overview">
+    <div class="overview-card glass-card">
+      <h3>Who It's For</h3>
+      <p>{{ product().forWho }}</p>
+    </div>
+    <div class="overview-card glass-card">
+      <h3>The Problem</h3>
+      <p>{{ product().problem }}</p>
+    </div>
+    <div class="overview-card glass-card">
+      <h3>The Outcome</h3>
+      <p>{{ product().outcome }}</p>
+    </div>
+  </div>
+</app-section-wrapper>
+
+<app-section-wrapper [title]="'Key Features'" background="gradient">
+  <div class="features-grid">
+    <div class="feature-item" *ngFor="let feature of product().features">
+      <div class="feature-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+      </div>
+      <span>{{ feature }}</span>
+    </div>
+  </div>
+</app-section-wrapper>
+
+<section class="cta-section">
+  <div class="cta-bg">
+    <div class="cta-orb cta-orb--1"></div>
+    <div class="cta-orb cta-orb--2"></div>
+  </div>
+  <div class="container">
+    <div class="cta-content glass-card">
+      <h2>Ready to see <span class="gradient-text">{{ product().name }}</span> in action?</h2>
+      <p>Book a demo and we'll show you exactly how it fits your workflow.</p>
+      <div class="cta-actions">
+        <a routerLink="/contact" class="btn btn--primary">
+          {{ product().cta }}
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
